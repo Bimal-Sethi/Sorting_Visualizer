@@ -6,17 +6,17 @@ from bubble_sort import bubble_sort
 ### Making a window for the app ###
 root = Tk()
 root.title("Sorting Algorithm Visualisation")
-root.maxsize(height=600, width=900)
+root.maxsize(height=540, width=810)
 root.config(bg='black')
 
 ### Partioning the window in UI and Canvas ###
 UI_frame = Frame(root, width=600, height=200, bg='grey')
-UI_frame.grid(row=0, column=0, padx=10, pady=5)
+UI_frame.grid(row=0, column=0, padx=5, pady=5)
 
 canvas_width = 796
 canvas_height = 380
 canvas = Canvas(root, width=canvas_width, height=canvas_height, bg='white')
-canvas.grid(row=1, column=0, padx=10, pady=5)
+canvas.grid(row=1, column=0, padx=5, pady=5)
 
 ### varibales and functions ###
 selected_algo = StringVar()
