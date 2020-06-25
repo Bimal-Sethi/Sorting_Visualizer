@@ -1,7 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 import random
-from bubble_sort import bubble_sort
+from Sorting_Algorithms import bubble_sort
+from Sorting_Algorithms import merge_sort
 
 ### Making a window for the app ###
 root = Tk()
@@ -56,7 +57,8 @@ def Generate():
 
 def startAlgo():
     global data
-    bubble_sort(data, draw, 0.25/speedScale.get())
+    if(algMenu.get()=='Bubble Sort'): bubble_sort(data, draw, 0.25/speedScale.get())
+    elif(algMenu.get()=='Merge Sort'): merge_sort(data, draw, 0.25/speedScale.get())
 
 ### User Interface Area ###
 Label(UI_frame, text="Sort Using :", bg='white').grid(row=0, column=0, padx=5, pady=5, sticky=W)
